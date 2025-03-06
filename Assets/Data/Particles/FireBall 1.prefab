@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1502860683885741496}
   - component: {fileID: 5493111998984502626}
   - component: {fileID: 6864359484966685821}
+  - component: {fileID: -5035783428505042086}
+  - component: {fileID: -2360139353439974576}
   m_Layer: 0
   m_Name: FireBall 1
   m_TagString: Untagged
@@ -227,10 +229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When a collision with a trigger with tags [Walls,Enemy] starts:\n         
-    if (ObjectWithTagInRange(Enemy,100) <> 0) destroys object that collided with
-    this - only valid when called from a collision event\n          destroys this
-    object\n"
+  _explanation: "When a collision with a trigger with tags [Enemy] starts:\n         
+    destroys object that collided with this - only valid when called from a collision
+    event\n          spawns prefab Particle System 3 at the position of this object
+    (FireBall 1)\n          destroys this object\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -240,11 +242,12 @@ MonoBehaviour:
   - delay: 0
     action: {fileID: 5493111998984502626}
   - delay: 0
+    action: {fileID: -5035783428505042086}
+  - delay: 0
     action: {fileID: 1502860683885741496}
   isTrigger: 1
   eventType: 0
   tags:
-  - {fileID: 11400000, guid: b46c59208fc115d429294eb3ad6dd047, type: 2}
   - {fileID: 11400000, guid: b6d7e44e7881c8f45823fd5df6a9e293, type: 2}
 --- !u!114 &1502860683885741496
 MonoBehaviour:
@@ -282,14 +285,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: If (ObjectWithTagInRange(Enemy,100) <> 0) destroys object that collided
-    with this - only valid when called from a collision event
+  _explanation: Destroys object that collided with this - only valid when called
+    from a collision event
   description: 
   enableAction: 1
   hasTags: 1
   actionTags:
   - {fileID: 11400000, guid: b6d7e44e7881c8f45823fd5df6a9e293, type: 2}
-  hasConditions: 1
+  hasConditions: 0
   actionConditions:
   - negate: 0
     valueHandler: {fileID: 0}
@@ -297,13 +300,13 @@ MonoBehaviour:
     valueType: 1
     tag: {fileID: 11400000, guid: b6d7e44e7881c8f45823fd5df6a9e293, type: 2}
     tagCountRangeEnabled: 1
-    tagCountRange: 100
+    tagCountRange: 10
     sourceTransform: {fileID: 0}
     rigidBody: {fileID: 0}
     axis: 0
     probe: {fileID: 0}
     movementPlatformer: {fileID: 0}
-    comparison: 5
+    comparison: 3
     value: 0
     comparisonValueHandler: {fileID: 0}
     comparisonVariable: {fileID: 0}
@@ -331,3 +334,58 @@ MonoBehaviour:
   description: 
   hypertags:
   - {fileID: 11400000, guid: 2425f59a9d6f09e44a32346bf661fd7e, type: 2}
+--- !u!114 &-5035783428505042086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290576026824501683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab Particle System 3 at the position of this object (FireBall
+    1)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 6492241771939919086, guid: ea3ca4c2917f58741982cafbd976e5d1, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!114 &-2360139353439974576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290576026824501683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b66a51b7fe64c4390ac471b7df316b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When a collision with a trigger with tags [Walls,Enemy,ForeGround]
+    starts:\n          destroys this object\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 1502860683885741496}
+  isTrigger: 1
+  eventType: 0
+  tags:
+  - {fileID: 11400000, guid: b46c59208fc115d429294eb3ad6dd047, type: 2}
+  - {fileID: 11400000, guid: b6d7e44e7881c8f45823fd5df6a9e293, type: 2}
+  - {fileID: 11400000, guid: 09a651baf6833c64f8cd8c99485f0b62, type: 2}
