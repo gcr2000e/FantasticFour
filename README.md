@@ -1,13 +1,29 @@
 # 2D Platformer
-A simple 2D platformer base game created with [Okapi Kit](https://github.com/VideojogosLusofona/OkapiKit) for the Game Design 2 class at [Universidade Lusófona's Videogames Ba](https://www.ulusofona.pt/en/lisboa/bachelor/videogames).
+A simple 2D platformer base game created with [Okapi Kit](https://github.com/VideojogosLusofona/OkapiKit) for the Game Design 2 and Desenvolvimento de Jogos Digitais 1 classes at [Universidade Lusófona's Videogames Ba](https://www.ulusofona.pt/en/lisboa/bachelor/videogames).
 
 ![2D Platformer Screenshot](https://github.com/wilroda/platformer/blob/main/2dplatformer_01.png?raw=true)
 
 ![2D Platformer Screenshot](https://github.com/wilroda/platformer/blob/main/2dplatformer_02.png?raw=true)
 
-## Controls
+## Deprecated Controls
 - ← - Move Left
 - → - Move Right
 - X - Jump
 - Z - Hold to Run
 - T - Toggle Trail Renderer ON or OFF
+
+## Updated Controls
+###The Beast Controls:
+- A - Move Left
+- D - Move Right
+- S - Jump
+- Z - Dash
+
+###The Human-Torch Controls:
+- ← - Move Left
+- → - Move Right
+- Arrow Up - Jump
+- L - Fly
+- k - Fireball shot
+
+Here you'll find the [Updated Version](https://www.mediafire.com/file/szppdvt4urbj9jl/FantasticFourUpdated.zip/file)
