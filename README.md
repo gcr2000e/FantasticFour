@@ -13,13 +13,13 @@ A simple 2D platformer base game created with [Okapi Kit](https://github.com/Vid
 - T - Toggle Trail Renderer ON or OFF
 
 ## Updated Controls
-###The Beast Controls:
+### The Beast Controls:
 - A - Move Left
 - D - Move Right
 - S - Jump
 - Z - Dash
 
-###The Human-Torch Controls:
+### The Human-Torch Controls:
 - ← - Move Left
 - → - Move Right
 - Arrow Up - Jump
